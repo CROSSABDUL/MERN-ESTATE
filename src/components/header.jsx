@@ -6,6 +6,7 @@ export default function header() {
         <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
             <span className='text-slate-500'>ABS</span>
             <span className='text-slate-700'>Next</span>
+            <h2>how to commit data to gity git</h2>
         </h1>
 
 

@@ -1,12 +1,15 @@
 import React from "react";
-import { BrowserRouter } from 'react-router-dom';
-
+import { BrowserRouter, Link, Outlet } from 'react-router-dom';
+import Header from "./Components/Header";
 export default function App() {
   return (
     <div>
-      {/*<header>/> */}
-      {/* <outlet /> */}
-      {/* <footer /> */}
+    <Header/>      
+    <Outlet/>
     </div>
-  );
-}
+    
+
+
+
+  )
+};

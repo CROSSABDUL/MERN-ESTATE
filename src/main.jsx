@@ -8,13 +8,15 @@ import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import About from './pages/About';
 import './index.css';
+import 'tailwindcss/tailwind.css';
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+  
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Sign-in" element={<Signin />} />
         <Route path="/Sign-up" element={<Signup />} />
         <Route path="/Profile" element={<Profile />} />

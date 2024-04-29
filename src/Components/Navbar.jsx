@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+
 const Navbar = () => {
+  const {currentUser} = useSelector(state => state.user)
   return (
     <div className=' bg-slate-200 shadow-md'>
       <div className='flex justify-between items-center mx-6 '>
@@ -25,7 +28,18 @@ const Navbar = () => {
         <ul className='flex gap-4'>
           <li className='hidden sm:inline text-slate-700 hover:underline'><Link to='/'>Home</Link></li>
           <li className='hidden sm:inline text-slate-700 hover:underline'><Link to='/about'>About</Link></li>
-          <li className='hidden sm:inline text-slate-700 hover:underline'><Link to='/sign-in'>Signin</Link></li>
+
+
+          <Link to='/profile'>
+            {currentUser ? (
+              <div>
+                <img className='rounded-full h-7 w-7 object-cover' 
+                src={currentUser.avatar} alt="profile" />
+              </div>
+            ) : (
+              <li className='hidden sm:inline text-slate-700 hover:underline'>Signin</li>
+            )}
+          </Link>
         </ul>
         </div>
     
